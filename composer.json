@@ -1,5 +1,5 @@
 {
-    "name": "pacifica/pacifica-profiles",
+    "name": "pacifica/pacifica_profiles",
     "type": "drupal-profile",
     "description": "Pacifica Drupal Profiles",
     "license": "LGPL-3.0-or-later"
