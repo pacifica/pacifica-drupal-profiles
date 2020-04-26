@@ -39,6 +39,7 @@ install:
   - views_ui
   - tour
   - automated_cron
+  - pacifica_data_upload
 themes:
   - bartik
   - seven

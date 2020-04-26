@@ -2,5 +2,25 @@
     "name": "pacifica/pacifica_profiles",
     "type": "drupal-profile",
     "description": "Pacifica Drupal Profiles",
-    "license": "LGPL-3.0-or-later"
+    "license": "LGPL-3.0-or-later",
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "pacifica-dev": {
+            "no-api": true,
+            "type": "vcs",
+            "url": "https://git.drupalcode.org/project/pacifica.git"
+        },
+        "pacifica-theme-dev": {
+            "no-api": true,
+            "type": "vcs",
+            "url": "https://github.com/pacifica/pacifica-drupal-theme.git"
+        }
+    },
+    "require": {
+        "pacifica/pacifica": "dev-8.x-1.x",
+        "pacifica/pacifica_theme": "dev-8.x-1.x"
+    }
 }
