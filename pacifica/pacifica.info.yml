@@ -39,9 +39,6 @@ install:
   - views_ui
   - tour
   - automated_cron
-  - jsonapi
-  - bigint
-  - json_field
 themes:
   - bartik
   - seven

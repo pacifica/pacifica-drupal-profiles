@@ -2,17 +2,5 @@
     "name": "pacifica/pacifica_profiles",
     "type": "drupal-profile",
     "description": "Pacifica Drupal Profiles",
-    "license": "LGPL-3.0-or-later",
-    "prefer-stable": true,
-    "minimum-stability": "dev",
-    "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-    },
-    "require": {
-        "drupal/bigint": "1.x-dev",
-        "drupal/json_field": "^1.0@RC"
-    }
+    "license": "LGPL-3.0-or-later"
 }
