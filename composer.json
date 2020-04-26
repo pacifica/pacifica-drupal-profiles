@@ -23,6 +23,7 @@
     },
     "require": {
         "pacifica/pacifica": "dev-8.x-1.x",
-        "pacifica/pacifica_theme": "dev-8.x-1.x"
+        "pacifica/pacifica_theme": "dev-8.x-1.x",
+        "drupal/features": "^3.8"
     }
 }

@@ -40,6 +40,7 @@ install:
   - tour
   - automated_cron
   - pacifica_data_upload
+  - features
 themes:
   - bartik
   - seven
