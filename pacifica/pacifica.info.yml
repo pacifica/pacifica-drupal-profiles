@@ -29,7 +29,6 @@ install:
   - big_pipe
   - taxonomy
   - dblog
-  - search
   - shortcut
   - toolbar
   - field_ui
@@ -40,6 +39,7 @@ install:
   - tour
   - automated_cron
   - pacifica_data_upload
+  - pacifica_base_content
   - features
 themes:
   - bartik
