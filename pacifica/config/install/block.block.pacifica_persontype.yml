@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.pacifica_person_type
+  module:
+    - facets
+    - system
+  theme:
+    - pacifica
+id: pacifica_persontype
+theme: pacifica
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:pacifica_person_type'
+settings:
+  id: 'facet_block:pacifica_person_type'
+  label: 'Person Type'
+  provider: facets
+  label_display: visible
+  block_id: pacifica_persontype
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.pacifica_tags
+  module:
+    - facets
+    - system
+  theme:
+    - pacifica
+id: pacifica_tags
+theme: pacifica
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:pacifica_tags'
+settings:
+  id: 'facet_block:pacifica_tags'
+  label: Tags
+  provider: facets
+  label_display: visible
+  block_id: pacifica_tags
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

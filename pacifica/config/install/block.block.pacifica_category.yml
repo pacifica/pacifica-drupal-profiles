@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.pacifica_category
+  module:
+    - facets
+    - system
+  theme:
+    - pacifica
+id: pacifica_category
+theme: pacifica
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'facet_block:pacifica_category'
+settings:
+  id: 'facet_block:pacifica_category'
+  label: Category
+  provider: facets
+  label_display: visible
+  block_id: pacifica_category
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }
