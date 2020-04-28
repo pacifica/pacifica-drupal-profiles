@@ -1,0 +1,10 @@
+palette:
+  top: '#ffffff'
+  bottom: '#ffffff'
+  bg: '#ffffff'
+  sidebar: '#f6f6f2'
+  sidebarborders: '#3f3f3f'
+  footer: '#3f3f3f'
+  titleslogan: '#3f3f3f'
+  text: '#3f3f3f'
+  link: '#0071b3'
