@@ -7,6 +7,7 @@
 
 use Drupal\user\Entity\User;
 use Drupal\shortcut\Entity\Shortcut;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_install().
@@ -41,4 +42,13 @@ function pacifica_install() {
     'link' => ['uri' => 'internal:/admin/content'],
   ]);
   $shortcut->save();
+  $node = Node::create([
+    'type' => 'page',
+    'title' => 'Pacifica Software UI',
+    'body' => 'This is the body statement',
+  ]);
+  $node->save();
+  $site_settings = \Drupal::service('config.factory')->getEditable('system.site');
+  $site_settings->set('page.front', '/node/'.$node->id());
+  $site_settings->save();
 }
