@@ -41,6 +41,7 @@ install:
   - automated_cron
   - pacifica_data_upload
   - pacifica_base_content
+  - pacifica_sample_data
   - features
 themes:
   - pacifica
