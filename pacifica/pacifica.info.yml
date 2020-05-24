@@ -33,6 +33,7 @@ install:
   - toolbar
   - field_ui
   - file
+  - migrate_ui
   - rdf
   - views
   - views_ui
