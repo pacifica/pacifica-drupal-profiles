@@ -42,6 +42,7 @@ install:
   - pacifica_data_upload
   - pacifica_base_content
   - pacifica_sample_data
+  - pacifica_jsonapi
   - features
 themes:
   - pacifica
