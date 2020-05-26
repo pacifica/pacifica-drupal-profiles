@@ -22,8 +22,8 @@
         }
     },
     "require": {
-        "pacifica/pacifica": "dev-8.x-1.x",
-        "pacifica/pacifica_theme": "dev-8.x-1.x",
+        "pacifica/pacifica": "^0.1",
+        "pacifica/pacifica_theme": "^0.1",
         "drupal/features": "^3.8",
         "drupal/migrate_tools": "^5.0"
     }
