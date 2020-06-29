@@ -8,6 +8,7 @@
 use Drupal\user\Entity\User;
 use Drupal\shortcut\Entity\Shortcut;
 use Drupal\node\Entity\Node;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
 
 /**
  * Implements hook_install().
@@ -42,13 +43,40 @@ function pacifica_install() {
     'link' => ['uri' => 'internal:/admin/content'],
   ]);
   $shortcut->save();
-  $node = Node::create([
-    'type' => 'page',
-    'title' => 'Pacifica Software UI',
-    'body' => 'This is the body statement',
-  ]);
-  $node->save();
+  $profile_dir = drupal_get_path('profile', 'pacifica');
+  $nodes = yaml_parse(file_get_contents(
+    $profile_dir.'/pages.yml'
+  ));
+  foreach($nodes as $index => $node) {
+    Node::create([
+      'type' => 'page',
+      'title' => $node['title'],
+      'body' => [
+        'value' => $node['body'],
+        'format' => $node['format']
+      ],
+      'path' => [
+        'alias' => '/'.$node['alias']
+      ],
+    ])->save();
+    if ($node['alias'] != 'home') {
+      MenuLinkContent::create([
+        'title' => $node['title'],
+        'link' => ['uri' => 'internal:/'.$node['alias']],
+        'menu_name' => 'main',
+        'expanded' => TRUE,
+        'weight' => $index,
+      ])->save();
+    }
+  }
+  MenuLinkContent::create([
+    'title' => 'Search',
+    'link' => ['uri' => 'internal:/search'],
+    'menu_name' => 'main',
+    'expanded' => TRUE,
+    'weight' => 42,
+  ])->save();
   $site_settings = \Drupal::service('config.factory')->getEditable('system.site');
-  $site_settings->set('page.front', '/node/'.$node->id());
+  $site_settings->set('page.front', '/home');
   $site_settings->save();
 }

@@ -1,0 +1,39 @@
+---
+- title: What's In This Image?
+  format: full_html
+  alias: whatsprovided
+  body: |
+    <p>
+      This container has all the Pacifica services to support the Drupal site
+      you are viewing.  There are also other services used to manage files
+      outside Drupal. The information about the files are managed in the
+      <em style="font-family:monospace,monospace;font-size:1em;font-style:normal;">
+      Data Upload</em> content type. This information is used to contact
+      services in the container to upload and download files.
+    </p>
+- title: Load Sample Data
+  format: full_html
+  alias: sampledata
+  body: |
+    <p>
+      Sample data can be loaded from the original Pacifica services. The process
+      involves two processes, involving the original services and modifying this
+      site.
+    </p>
+    <ol>
+      <li>
+        <p>Load some example data into the Pacifica metadata service.</p>
+        <pre>
+        </pre>
+      </li>
+    </ol>
+- title: Pacifica Data Repository
+  format: full_html
+  alias: home
+  body: |
+    <p>There are several pages to the site showing functionality you can leverage on your site.</p>
+    <ul>
+        <li><a href="/whatsprovided">What's in this Image</a></li>
+        <li><a href="/sampledata">Loading Sample Data</a></li>
+        <li><a href="/search">Faceted Search</a></li>
+    </ul>
