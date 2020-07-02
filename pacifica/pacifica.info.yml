@@ -2,7 +2,7 @@ name: Pacifica
 type: profile
 description: 'Install with commonly used features pre-configured.'
 version: VERSION
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 install:
   - node
   - history
