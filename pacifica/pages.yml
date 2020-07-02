@@ -16,17 +16,19 @@
   alias: sampledata
   body: |
     <p>
-      Sample data can be loaded from the original Pacifica services. The process
-      involves two processes, involving the original services and modifying this
-      site.
+      Load some example data from the
+      <em style="font-family:monospace,monospace;font-size:1em;font-style:normal;">
+      pacifica_sample_data</em> module. This module contains an embedded sample
+      data set that can be used to see the rest of the functionality of the site.
     </p>
-    <ol>
-      <li>
-        <p>Load some example data into the Pacifica metadata service.</p>
-        <pre>
-        </pre>
-      </li>
-    </ol>
+    <p>
+      To login as an administrator go to the console for the container and run the
+      <em style="font-family:monospace,monospace;font-size:1em;font-style:normal;">
+      drush uli</em> command. Then use the URL to login to the site.
+      Click
+      <a href="/admin/structure/migrate/manage/pacifica_sample_data/migrations">
+      here</a> to get to the list of migrations click execute to load the data.
+    </p>
 - title: Pacifica Data Repository
   format: full_html
   alias: home
